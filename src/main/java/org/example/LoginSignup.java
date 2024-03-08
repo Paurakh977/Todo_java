@@ -29,7 +29,8 @@ public class LoginSignup {
                 connection.close();
                 Tasks.ask(Username);
             }else {
-
+                 connection.close();
+                 Tasks.show(Username);   
             }
         }
     } catch (SQLException e) {

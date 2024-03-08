@@ -36,7 +36,7 @@ public class Database {
                 " Username TEXT NOT NULL, " +
                 " Task TEXT NOT NULL, " +
                 " Description TEXT NOT NULL, " +
-                " Time TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
+                " Time DATE DEFAULT (DATE('now', 'localtime')))";
 
         try (Statement statement = connection.createStatement()) {
             statement.execute(createTableQuery);
